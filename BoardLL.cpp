@@ -20,35 +20,35 @@ void BoardLL::Init(){
     P3DIR |= (1 << 6);                        // P3.6 output
 }
 
-void BoardLL::SetFrontLeftLight(bool on) {
+void BoardLL::SetFrontRightLight(bool on) {
     if(on) P1OUT |= 1 << 3;
     else P1OUT &= ~(1 << 3);
 }
-void BoardLL::ToggleFrontLeftLight() {
+void BoardLL::ToggleFrontRightLight() {
     P1OUT ^= 1 << 3;
 }
 
-void BoardLL::SetFrontRightLight(bool on) {
+void BoardLL::SetFrontLeftLight(bool on) {
     if(on) P1OUT |= 1 << 2;
     else P1OUT &= ~(1 << 2);
 }
-void BoardLL::ToggleFrontRightLight() {
+void BoardLL::ToggleFrontLeftLight() {
     P1OUT ^= 1 << 2;
 }
 
-void BoardLL::SetRearLeftLight(bool on) {
+void BoardLL::SetRearRightLight(bool on) {
     if(on) P3OUT |= 1 << 6;
     else P3OUT &= ~(1 << 6);
 }
-void BoardLL::ToggleRearLeftLight() {
+void BoardLL::ToggleRearRightLight() {
     P3OUT ^= 1 << 6;
 }
 
-void BoardLL::SetRearRightLight(bool on) {
+void BoardLL::SetRearLeftLight(bool on) {
     if(on) P4OUT |= 1 << 2;
     else P4OUT &= ~(1 << 2);
 }
-void BoardLL::ToggleRearRightLight() {
+void BoardLL::ToggleRearLeftLight() {
     P4OUT ^= 1 << 2;
 }
 
