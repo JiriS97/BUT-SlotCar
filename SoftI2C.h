@@ -1,9 +1,11 @@
-#ifndef SoftwareWire_h
-#define SoftwareWire_h
+#ifndef SOFTWARE_I2C_H_
+#define SOFTWARE_I2C_H_
 
 #include <stdint.h>
 #include <string.h>
 #include <msp430.h>
+
+//Based on Arduino Wire library
 
 class SoftI2C
 {
@@ -183,4 +185,4 @@ private:
 	}
 };
 
-#endif // SoftwareWire_h
+#endif // SOFTWARE_I2C_H_
