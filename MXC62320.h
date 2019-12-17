@@ -19,6 +19,7 @@ private:
 
     uint8_t internalReg;
     uint16_t accelX, accelY;
+    uint16_t accelXoffset = 0, accelYoffset = 0;
 
 public:
     MXC62320(SoftI2C *bus) : i2c(bus) {;}
@@ -31,6 +32,7 @@ public:
     uint16_t GetRawAccelY() { return accelY;}
     int16_t GetAccelXmG();
     int16_t GetAccelYmG();
+    void CalibrateZero(int numMeasurements, unsigned long delay);
 };
 
 #endif /* MXC62320_H_ */
